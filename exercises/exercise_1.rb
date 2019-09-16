@@ -6,7 +6,7 @@ puts "----------"
 # Your code goes below here ...
 
 class Store < ActiveRecord::Base
-  attr_accessor :store1, :store2, :store3, :mens_stores, :womens_stores
+  attr_accessor :store1, :store2, :store3, :mens_stores, :womens_stores, :total_sales
 end
 
 Store.create(name: "Burnaby", annual_revenue: 300000, mens_apparel: true, womens_apparel: true);
@@ -43,6 +43,14 @@ p Store.count()
 @womens_stores = Store.where("womens_apparel = true AND annual_revenue < 1000000");
 
 p @womens_stores
+
+@total_sales = Store.sum(:annual_revenue)
+
+p @total_sales
+p @total_sales / Store.count()
+
+p Store.where("annual_revenue >= 1000000").count()
+
 
 
 
