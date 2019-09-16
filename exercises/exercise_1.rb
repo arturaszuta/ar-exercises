@@ -51,6 +51,16 @@ p @total_sales / Store.count()
 
 p Store.where("annual_revenue >= 1000000").count()
 
+@store1.employees.create(first_name: "Khurram", last_name: "Virani", hourly_rate: 60)
+@store1.employees.create(first_name: "Thomas", last_name: "Jefferson", hourly_rate: 37)
+@store1.employees.create(first_name: "Jerry", last_name: "Cottonears", hourly_rate: 75)
+@store1.employees.create(first_name: "Rambo", last_name: "Five", hourly_rate: 45)
+
+@store2.employees.create(first_name: "Lena", last_name: "Tavarisc", hourly_rate: 52)
+@store2.employees.create(first_name: "Reginald", last_name: "Broflovski", hourly_rate: 85)
+@store2.employees.create(first_name: "Nate", last_name: "Varmil", hourly_rate: 100)
+@store2.employees.create(first_name: "Renata", last_name: "Kubilaite", hourly_rate: 25)
+
 
 
 
